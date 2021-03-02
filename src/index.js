@@ -4,14 +4,20 @@ import ReactDOM from "react-dom";
 import "./styles.css";
 
 /*
- Using the starting point below, create a basic shopping cart component with React. A user should be able to:
+ Using the starting point below, create a shopping cart component with React.
+ 
+ A user should be able to:
 	- View a list of the items in their shopping cart
 	- Add new items to the shopping cart via a text input + submit button
 
-  You don't need to do anything with styling, etc. Just focus on functionality and React logic.
+  You don't need to do anything with styling, etc. Just focus on functionality
+  and React logic.
+
+**Bonus**: Add a button to each list item that allows a user to delete the given item
+**Double Bonus**: Refactor this component to use hooks instead of a class component
 */
 
-class App extends Component {
+class ShoppingCart extends Component {
   state = {
     items: ["Apples", "Granola Bars", "Ground Turkey"]
   };
@@ -30,7 +36,9 @@ class App extends Component {
           <div>
             <label htmlFor="newItem">Add an item</label>
           </div>
-          <input type="text" name="newItem" />
+          <div>
+            <input type="text" name="newItem" />
+          </div>
           <input type="submit" value="Add" />
         </form>
       </>
@@ -39,4 +47,4 @@ class App extends Component {
 }
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(<ShoppingCart />, rootElement);

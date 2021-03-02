@@ -1,4 +1,13 @@
-.App {
+body {
   font-family: sans-serif;
   text-align: center;
+}
+
+ul {
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+form > div {
+  margin-bottom: 5px;
 }
